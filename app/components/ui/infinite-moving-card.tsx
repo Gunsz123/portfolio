@@ -10,10 +10,11 @@ export const InfiniteMovingCards = ({
   speed = "fast",
   pauseOnHover = true,
   className,
+  children,
 }: {
   items: {
-    quote: string;
-    name: string;
+    quote?: string;
+    name?: string;
     title: string;
     src: string;
   }[];
@@ -21,6 +22,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  children?: React.ReactNode;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -68,11 +70,13 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
+      key={Math.floor(Math.random() * 1000)}
       className={cn(
-        "ml-5 mt-5 scroller relative z-20   max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "ml-5 mt-5 scroller relative z-100   max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}>
       <ul
+        key={Math.floor(Math.random() * 1000)}
         ref={scrollerRef}
         className={cn(
           "flex min-w-full shrink-0 gap-4 py-5 w-max flex-nowrap",
@@ -80,16 +84,16 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item, idx) => (
           <li
-            className="w-[300px] max-w-full relative rounded-2xl border flex-shrink-0 bg-[#100c2c] border-violet-950 px-8 py-12 md:w-[450px]"
-            key={item.name}>
+            className="w-[300px] max-w-full relative rounded-2xl border flex-shrink-0 bg-[#100c2c] border-violet-950 z-10 px-8 py-12 md:w-[450px]"
+            key={Math.floor(Math.random() * 1000)}>
             <blockquote>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
-              <span className="relative z-20  text-sm leading-[1.6] text-gray-100 font-normal">
+              <span className="relative z-0  text-sm leading-[1.6] text-gray-100 font-normal">
                 {item.quote}
               </span>
-              <div className="relative md:mb-2  z-20  mt-5 flex flex-row justify-between">
+              <div className="relative md:mb-2  z-0  mt-5 flex flex-row justify-between">
                 <span className="flex  flex-col gap-1 items-center">
                   <div className="flex flex-col md:flex-row  items-center justify-center">
                     <span className="ml-20">

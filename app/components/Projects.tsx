@@ -21,13 +21,13 @@ const Projects = () => {
     });
   }, []);
 
-  function handleMouseOver(event) {
+  function handleMouseOver(event: any) {
     let iterations = 0;
 
     const interval = setInterval(() => {
       event.target.innerText = event.target.innerText
         .split("")
-        .map((letter, index) => {
+        .map((letter: any, index: any) => {
           if (index < iterations) {
             return event.target.dataset.value[index];
           }
@@ -46,19 +46,19 @@ const Projects = () => {
 
   return (
     <motion.div
-      initial={{ y: 10000 }}
-      animate={{ y: 0 }}
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`tracking-tighter mt-48 ${montserrat.className}`}>
       <h1
         data-value="My Projects"
-        className="font-bold md:ml-[800px] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900 ml-32 mt-5 w-[20rem]">
+        className="font-bold 2xl:ml-[800px] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900 ml-32 mr-5 mt-5 w-[20rem] md:ml-[650px]">
         My Projects
       </h1>
       {projectsData.map((project, index) => (
         <div
           key={index}
-          className="md:ml-[300px] md:flex md:flex-row-reverse md:mt-[15px] ml-12 mt-5 max-w-[20rem] md:max-w-[80rem] bg-[#100c2c] md:h-[420px] mb-[15rem] border-violet-900 border-[1px] rounded-xl md:justify-between">
+          className="2xl:ml-[300px] md:ml-[110px] md:flex md:flex-row-reverse md:mt-[15px] ml-12 mt-5 max-w-[20rem] md:max-w-[80rem] bg-[#100c2c] md:h-[420px] mb-[15rem] border-violet-900 border-[1px] rounded-xl md:justify-between">
           <Image
             onClick={() => window.open(project.site, "_blank")}
             alt="project"

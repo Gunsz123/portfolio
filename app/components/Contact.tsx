@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-
+import { motion } from "framer-motion";
 export const Contact = () => {
   const Container = useRef(null);
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -59,13 +59,19 @@ export const Contact = () => {
   };
 
   return (
-    <section ref={container} id="contact" className="flex flex-col gap-8 mb-5">
+    <motion.section
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      ref={container}
+      id="contact"
+      className="flex flex-col gap-8 mb-48  md:ml-[10px]">
       <h1
-        className="2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-800 font-semibold w-fit inline-block mr-4 anim9 items-center justify-center md:ml-[52rem] md:mt-[2rem] md:w-[20rem] ml-[8rem] mt-[2rem]"
+        className="2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-800 font-bold w-fit inline-block mr-4 anim9 items-center justify-center 2xl:ml-[52rem] md:ml-[38rem] md:mt-[4 rem] md:w-[20rem] ml-[7rem] mt-[2rem]"
         data-value="Contact Me">
         Contact Me
       </h1>
-      <form className="flex flex-col gap-6 " ref={form} onSubmit={sendEmail}>
+      <form className="flex flex-col gap-6 ml-5 mr-5" ref={form} onSubmit={sendEmail}>
         <input
           required
           value={name}
@@ -73,7 +79,7 @@ export const Contact = () => {
           type="text"
           name="user_name"
           placeholder="Name"
-          className="  py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 md:ml-[350px] md:w-[65%] "
+          className="py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 2xl:ml-[350px] md:ml-[250px] md:w-[65%] "
         />
         <input
           required
@@ -82,7 +88,7 @@ export const Contact = () => {
           type="email"
           name="user_email"
           placeholder="Email"
-          className=" py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 md:ml-[350px] md:w-[65%]"
+          className=" py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 2xl:ml-[350px] md:ml-[250px] md:w-[65%]"
         />
         <textarea
           required
@@ -90,15 +96,15 @@ export const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
           name="message"
           placeholder="Your Message"
-          className="py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 h-80 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 md:ml-[350px] md:w-[65%]"
+          className="py-4 rounded-lg px-4 border border-violet-800/50  bg-violet-800/20 h-80 placeholder:text-white text-white outline-none anim9 focus-within:border-violet-800 2xl:ml-[350px] md:ml-[250px] md:w-[65%]"
         />
 
         <input
-          className="w-fit border border-violet-800 px-4 py-2 bg-transparent  rounded-lg md:ml-[930px] text-white ml-[11rem] hover:rotate-[-18deg] transition-all "
+          className="w-fit border border-violet-800 px-4 py-2 bg-transparent  rounded-lg 2xl:ml-[350px] md:ml-[250px] text-white ml-[8rem] hover:rotate-[-18deg] transition-all "
           type="submit"
           value="Send"
         />
       </form>
-    </section>
+    </motion.section>
   );
 };

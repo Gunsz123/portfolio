@@ -2,6 +2,7 @@
 
 import { Montserrat } from "next/font/google";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
@@ -40,9 +41,12 @@ const About = () => {
     });
   }, []);
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       id="about"
-      className={`${montserrat} font-semibod items-center mt-5 flex flex-col md:ml-[350px] md:w-[65%]`}>
+      className={`${montserrat} font-semibod items-center mt-5 flex flex-col mb-24 md:ml-[250px] 2xl:ml-[350px] md:w-[65%]`}>
       <h1
         className="2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900  font-bold inline-block mr-4 w-fit mb-8"
         data-value="About Me">
@@ -76,7 +80,7 @@ const About = () => {
           </svg>
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

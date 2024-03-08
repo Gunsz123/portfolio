@@ -22,7 +22,7 @@ export const Navbar = () => {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`flex  justify-evenly sm:none  fixed left-0 right-0 top-0 pt-6 z-100 pb-4 backdrop-blur-md bg-transparent border-b-2  border-violet-950 ${montserrat.className}`}>
+      className={`flex  justify-evenly sm:none  z-50 fixed top-0 left-0 right-0 pt-6  pb-4 backdrop-blur-md bg-transparent border-b-2  border-violet-950 ${montserrat.className}`}>
       <h2 className={`text-violet-600 text-3xl flex ${rubik.className}`}>
         <FaStar
           className={`text-violet-600 mr-3 hover:transform hover:rotate-[360deg] duration-200 `}
@@ -31,10 +31,10 @@ export const Navbar = () => {
       </h2>
       <RxHamburgerMenu
         onClick={toggleMobileMenu}
-        className="w-7 h-10  text-violet-600 md:hidden ml-32"
+        className="w-7 h-10  text-violet-600 md:hidden ml-30"
       />
       <div>
-        {navItems.map((item) => (
+        {navItems.map((item: any) => (
           <a
             key={item.href}
             className="relative text-violet-600 text-xl ml-7 hover:opacity-60 hover:scale-110 transition-all ease-in l-0 hidden md:inline"
@@ -58,8 +58,7 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <>
           <IoMdClose
-            style={{ color: "rgb(76 29 149)" }}
-            className="w-5 h-5 z-10 absolute top-5 right-5 md:hidden flex flex-col justify-center flex-1 items-center cursor-pointer space-y-8"
+            className="w-5 h-5 z-50 absolute top-5 right-5 md:hidden flex flex-col justify-center flex-1 items-center cursor-pointer space-y-8 text-[rgb(76,29,149)]"
             onClick={toggleMobileMenu}
           />
           <motion.div
