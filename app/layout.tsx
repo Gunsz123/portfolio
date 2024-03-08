@@ -43,10 +43,11 @@ export default function RootLayout({
                 outerAlpha: 0.3,
                 innerScale: 0.7,
                 outerScale: 5,
-              },
+              } as any, // Use type assertion here
             },
           ]}
         />
+
         {children}
       </body>
     </html>
