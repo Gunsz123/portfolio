@@ -49,16 +49,16 @@ const Projects = () => {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`tracking-tighter mt-48 ${montserrat.className}`}>
+      className={`tracking-tighter flex flex-col justify-center items-center mt-48 ${montserrat.className}`}>
       <h1
         data-value="My Projects"
-        className="font-bold 2xl:ml-[800px] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900 ml-32 mr-5 mt-5 w-[20rem] md:ml-[650px]">
+        className="font-bold md:ml-4 ml-[12rem] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900 mr-5 mt-5 w-[20rem] ">
         My Projects
       </h1>
       {projectsData.map((project, index) => (
         <div
           key={index}
-          className="2xl:ml-[300px] md:ml-[110px] md:flex md:flex-row-reverse md:mt-[15px] ml-12 mt-5 max-w-[20rem] md:max-w-[80rem] bg-[#100c2c] md:h-[420px] mb-[15rem] border-violet-900 border-[1px] rounded-xl md:justify-between">
+          className="md:flex md:flex-row-reverse md:mt-[15px] ml-12 mt-5 max-w-[20rem] md:max-w-[80rem] bg-[#100c2c] md:h-[420px] mb-[15rem] border-violet-900 border-[1px] rounded-xl md:justify-between">
           <Image
             onClick={() => window.open(project.site, "_blank")}
             alt="project"

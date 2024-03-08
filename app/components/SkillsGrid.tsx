@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const SkillsGrid = () => {
   return (
     <>
-      <div className="">
+      <div className="2xl:flex 2xl:items-center 2xl:justify-center">
         <InfiniteMovingCards items={techArray} direction="right" speed="slow">
           {techArray.map((tech) => (
             <div
@@ -34,10 +34,10 @@ const SkillsGrid = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         data-value="Tools"
-        className="md:text-5xl text-3xl max-w-5 font-semibold mt-10 ml-[160px] md:ml-[570px] 2xl:ml-[800px] text-gray-400">
+        className="md:text-5xl text-3xl max-w-5 font-semibold mt-10 ml-[160px] md:ml-[570px] 2xl:ml-[780px] text-gray-400">
         Tools
       </motion.h1>
-      <div className="">
+      <div className="2xl:flex 2xl:items-center 2xl:justify-center">
         <InfiniteMovingCards items={techTools} direction="right" speed="slow">
           {techTools.map((tech) => (
             <div
