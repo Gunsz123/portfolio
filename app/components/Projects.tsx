@@ -52,7 +52,7 @@ const Projects = () => {
       className={`tracking-tighter flex flex-col justify-center items-center mt-48 mr-4 md:mr-0 ${montserrat.className}`}>
       <h1
         data-value="My Projects"
-        className="font-bold 2xl:ml-[8rem] lg:ml-[8rem] md:ml-[20rem] ml-[12rem] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl mb-3 text-violet-900 mr-5 mt-5 ">
+        className="font-bold 2xl:ml-[8rem] lg:ml-[8rem] md:ml-[20rem] ml-[5rem] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl mb-3 text-violet-900 mr-5 mt-5 ">
         My Projects
       </h1>
       {projectsData.map((project, index) => (
