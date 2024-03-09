@@ -67,7 +67,7 @@ export const Contact = () => {
       id="contact"
       className="flex flex-col gap-8 mb-48  md:ml-[10px]">
       <h1
-        className="2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-800 font-bold w-fit inline-block mr-4 anim9 items-center justify-center 2xl:ml-[52rem] md:ml-[38rem] md:mt-[4 rem] md:w-[20rem] ml-[7rem] mt-[2rem]"
+        className="2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-800 font-bold w-fit inline-block mr-4 anim9 items-center justify-center 2xl:ml-[51rem] md:ml-[30rem] md:mt-[4 rem] md:w-[20rem] ml-[7rem] mt-[2rem]"
         data-value="Contact Me">
         Contact Me
       </h1>

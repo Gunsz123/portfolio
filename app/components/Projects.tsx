@@ -49,10 +49,10 @@ const Projects = () => {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`tracking-tighter flex flex-col justify-center items-center mt-48 ${montserrat.className}`}>
+      className={`tracking-tighter flex flex-col justify-center items-center mt-48 mr-4 md:mr-0 ${montserrat.className}`}>
       <h1
         data-value="My Projects"
-        className="font-bold md:ml-4 ml-[12rem] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl text-violet-900 mr-5 mt-5 w-[20rem] ">
+        className="font-bold 2xl:ml-[8rem] lg:ml-[8rem] md:ml-[20rem] ml-[12rem] md:mb-12 2xl:text-5xl lg:text-4xl md:text-4xl text-3xl mb-3 text-violet-900 mr-5 mt-5 ">
         My Projects
       </h1>
       {projectsData.map((project, index) => (
@@ -62,7 +62,7 @@ const Projects = () => {
           <Image
             onClick={() => window.open(project.site, "_blank")}
             alt="project"
-            width={300}
+            width={280}
             height={220}
             src={`/${project.src}`}
             className="rounded-xl ml-2 mb-5 mr-4 mt-4 md:w-[671px] md:h-[384px] md:rounded-2xl md:py-2 md:px-2 flex justify-center text-violet-800"

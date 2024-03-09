@@ -34,7 +34,7 @@ const SkillsGrid = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         data-value="Tools"
-        className="md:text-5xl text-3xl max-w-5 font-semibold mt-10 ml-[160px] md:ml-[570px] 2xl:ml-[780px] text-gray-400">
+        className="md:text-5xl text-3xl max-w-5 2xl:ml-[50rem] lg:ml-[24rem] md:ml-[20rem] ml-[10rem]  font-semibold mt-10  text-gray-400">
         Tools
       </motion.h1>
       <div className="2xl:flex 2xl:items-center 2xl:justify-center">
