@@ -52,22 +52,22 @@ const About = () => {
         data-value="About Me">
         About Me
       </h1>
-      <p className="text-lg text-gray-400 tracking-wide ml-5 sm:w-[80%]">
+      <p className="text-2xl text-gray-400 tracking-wide ml-5 sm:w-[80%]">
         Hello there! 👋 I'm <span className="font-semibold">Hassan</span> , a self-taught frontend
         web developer with a passion for crafting engaging and user-friendly digital
         experiences.I've honed my front-end Skills to create visually appealing and responsive
         websites.
       </p>
-      <p className="ml-5 text-gray-400 tracking-wide text-md sm:w-[80%]">
+      <p className="ml-5 text-2xl text-gray-400 tracking-wide text-md sm:w-[80%]">
         As a curious and self-driven developer, I love tackling challenges and finding innovative
         solutions.I have developed a liking for learning new technologies to solve the problems.
       </p>
-      <p className="text-md text-gray-400 tracking-wide  ml-5 sm:w-[80%] mt-6">
+      <p className="text-2xl text-gray-400 tracking-wide  ml-5 sm:w-[80%] mt-6">
         I'm always open to collaboration and new opportunities. Whether you have a project in mind
         or just want to connect, feel free to reach out. Let's build something amazing together!
       </p>
 
-      <div className="mt-3 flex hover:rotate-[360deg] duration-300">
+      <div className="mt-5 flex hover:rotate-[360deg] duration-300">
         <a href="https://github.com/Gunsz123" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 128 128">
             <g fill="#6B26D9">

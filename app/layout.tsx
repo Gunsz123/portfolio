@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "../app/globals.css";
+import { Barlow } from "next/font/google";
+const barlow = Barlow({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Hassan | Portfolio",
@@ -13,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={` ${barlow.className}`}>{children}</body>
     </html>
   );
 }

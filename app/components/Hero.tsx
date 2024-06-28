@@ -46,25 +46,19 @@ const Hero = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="md:text-5xl text-3xl text-gray-400 ">
+        className="md:text-5xl mb-4 md:mb-5 text-3xl text-gray-400 ">
         Hi, My Name is
       </motion.h2>
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="md:text-8xl text-5xl text-violet-900 hover:scale-125 font-bold duration-100 mt-3 md:mt-0 "
+        className="md:text-9xl text-7xl text-violet-900 hover:scale-125 font-bold duration-100 mt-3 md:mb-5 md:mt-0 "
         data-value="Hassan">
         Hassan
       </motion.h1>
-      <TextGenerateEffect
-        className="ml-[50px] md:ml-0 "
-        words={"I am a passionate front end web developer"}
-      />
-      <TextGenerateEffect
-        className="ml-[50px] md:ml-0 "
-        words={"I will help turn your ideas into reality."}
-      />
+      <TextGenerateEffect className="mt-5" words={"I am a passionate front end web developer"} />
+      <TextGenerateEffect words={"I will help turn your ideas into reality."} />
     </motion.div>
   );
 };

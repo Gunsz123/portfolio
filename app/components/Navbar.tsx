@@ -31,7 +31,7 @@ export const Navbar = () => {
       </h2>
       <RxHamburgerMenu
         onClick={toggleMobileMenu}
-        className="w-7 h-10  text-violet-600 md:hidden ml-30"
+        className="w-7 h-10  text-violet-600 md:hidden ml-40"
       />
       <div>
         {navItems.map((item: any) => (
